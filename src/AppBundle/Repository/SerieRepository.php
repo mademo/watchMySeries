@@ -10,4 +10,11 @@ namespace AppBundle\Repository;
  */
 class SerieRepository extends \Doctrine\ORM\EntityRepository
 {
+	 public function getSerieByDate()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.dateProduction','desc')
+            ->getQuery()
+            ->getResult();
+    }
 }

@@ -204,5 +204,11 @@ class Serie
     {
         return $this->nameSerie;
     }
+
+    public function __toString()
+    {
+        return $this->nameSerie;
+
+    }
 }
 
