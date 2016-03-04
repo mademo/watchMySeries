@@ -69,7 +69,14 @@ class Serie
      */
     private $dateProduction;
 
-  
+
+    /**
+     * @var \string
+     *
+     * @ORM\Column(name="description", type="string",length=10000)
+     */
+    private $description;
+
 
 
     /**
@@ -236,5 +243,22 @@ class Serie
         return $this->nameSerie;
 
     }
+        public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
 }
 

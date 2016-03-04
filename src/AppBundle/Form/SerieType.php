@@ -22,6 +22,7 @@ class SerieType extends AbstractType
             ->add('realisateur')
             ->add('acteur')
             ->add('categorie')
+            ->add('description')
         ;
     }
     
