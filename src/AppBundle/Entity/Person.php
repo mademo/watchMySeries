@@ -42,20 +42,18 @@ class Person
     private $seriesProducted;
 
         /**
-     * @ORM\OneToMany(targetEntity="Serie",mappedBy="acteur")
+     * @ORM\ManyToMany(targetEntity="Serie",mappedBy="acteur")
      * @var string
      */
     private $seriesPlayed;
-
-
-
-    
 
     /**
      * Get id
      *
      * @return int
      */
+
+    
     public function getId()
     {
         return $this->id;

@@ -26,7 +26,7 @@ class SerieController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $series = $em->getRepository('AppBundle:Serie')->getSerieByDate();
+        $series = $em->getRepository('AppBundle:Serie')->getSerieByType();
 
         return $this->render('serie/index.html.twig', array(
             'series' => $series,

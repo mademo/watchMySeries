@@ -34,6 +34,12 @@ class Serie
     */
     private $episodes;
 
+    /**
+     * @var string
+     * @ORM\ManyToOne(targetEntity= "Categorie", inversedBy= "series")
+     * 
+     */
+    private $categorie;
 
     /**
      * @var string
@@ -62,6 +68,8 @@ class Serie
      * @ORM\Column(name="dateProduction", type="date")
      */
     private $dateProduction;
+
+  
 
 
     /**
@@ -203,6 +211,24 @@ class Serie
     public function getNameSerie()
     {
         return $this->nameSerie;
+    }
+
+
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
     }
 
     public function __toString()
