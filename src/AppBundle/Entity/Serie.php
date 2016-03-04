@@ -6,9 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Serie
- *
+ * @ORM\HasLifecycleCallbacks
  * @ORM\Table(name="serie")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\SerieRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\SerieRepository") 
  */
 class Serie
 {
@@ -77,6 +77,12 @@ class Serie
      */
     private $description;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modification", type="datetime")
+     */
+    private $modification;
 
 
     /**
@@ -260,5 +266,30 @@ class Serie
         return $this->description;
     }
 
+    public function setModfification($modification)
+    {
+        $this->modification = $modification;
+
+        return $this;
+    }
+
+    /**
+     * Get modification
+     *
+     * @return string
+     */
+    public function getModification()
+    {
+        return $this->modification;
+    }
+
+
+    /** 
+    * @ORM\PreUpdate 
+    */
+    public function updateModif()
+    {
+        $this->modification = new \DateTime("now");
+    }
 }
 

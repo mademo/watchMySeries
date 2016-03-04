@@ -11,6 +11,7 @@
                 <th>Origine</th>
                 <th>Date production</th>
                 <th>Categorie</th>
+                <th>Date Modif</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                 <td>{{ serie.origine }}</td>
                 <td>{% if serie.dateProduction %}{{ serie.dateProduction|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ serie.categorie }}</td>
+                <td>{% if serie.modification %}{{ serie.modification|date('Y-m-d H:i') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>
