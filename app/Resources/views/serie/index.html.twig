@@ -7,9 +7,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nameserie</th>
+                <th>Name serie</th>
                 <th>Origine</th>
-                <th>Dateproduction</th>
+                <th>Date production</th>
+                <th>Categorie</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ serie.nameSerie }}</td>
                 <td>{{ serie.origine }}</td>
                 <td>{% if serie.dateProduction %}{{ serie.dateProduction|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ serie.categorie }}</td>
                 <td>
                     <ul>
                         <li>

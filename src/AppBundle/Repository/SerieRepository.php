@@ -17,4 +17,11 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
             ->getQuery()
             ->getResult();
     }
+     public function getSerieByType()
+    {
+        return $this->createQueryBuilder('a')
+            ->orderBy('a.categorie','desc')
+            ->getQuery()
+            ->getResult();
+    }
 }

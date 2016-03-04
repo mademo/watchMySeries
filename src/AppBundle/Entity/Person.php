@@ -47,15 +47,13 @@ class Person
      */
     private $seriesPlayed;
 
-
-
-    
-
     /**
      * Get id
      *
      * @return int
      */
+
+    
     public function getId()
     {
         return $this->id;
