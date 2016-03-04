@@ -30,7 +30,7 @@ class Serie
     private $nameSerie;
 
     /*
-    * @ORM\OneToMany(targetEntity= "Episode", mappedBy= "serie")
+    * @ORM\OneToMany(targetEntity= "Episode", mappedBy= "serie", cascade={"remove"})
     */
     private $episodes;
 

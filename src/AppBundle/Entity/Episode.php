@@ -147,6 +147,7 @@ class Episode
     {
         return $this->serie;
     }
+
 }
 
 

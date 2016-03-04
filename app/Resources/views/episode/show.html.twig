@@ -14,6 +14,10 @@
                 <td>{{ episode.name }}</td>
             </tr>
             <tr>
+                <th>Name's serie</th>
+                <td>{% if episode.serie %}{{ episode.serie }}{% endif %}</td>
+            </tr>
+            <tr>
                 <th>Date</th>
                 <td>{% if episode.date %}{{ episode.date|date('Y-m-d') }}{% endif %}</td>
             </tr>

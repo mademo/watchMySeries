@@ -8,6 +8,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Name's serie</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Actions</th>
@@ -18,6 +19,7 @@
             <tr>
                 <td><a href="{{ path('episode_show', { 'id': episode.id }) }}">{{ episode.id }}</a></td>
                 <td>{{ episode.name }}</td>
+                <td>{{ episode.serie }}</td>
                 <td>{% if episode.date %}{{ episode.date|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if episode.time %}{{ episode.time|date('H:i:s') }}{% endif %}</td>
                 <td>
