@@ -30,7 +30,7 @@ class Serie
     private $nameSerie;
 
     /*
-    * @ORM\OneToMany(targetEntity= "Episode", mappedBy= "serie")
+    * @ORM\OneToMany(targetEntity= "Episode", mappedBy= "serie", cascade={"remove"})
     */
     private $episodes;
 
@@ -204,5 +204,12 @@ class Serie
     {
         return $this->nameSerie;
     }
+
+    public function __toString()
+    {
+        return $this->nameSerie;
+
+    }
+
 }
 
