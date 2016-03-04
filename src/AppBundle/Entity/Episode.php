@@ -43,8 +43,7 @@ class Episode
     private $time;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Serie",inversedBy="episodes")
-     * @var string
+     * @ORM\ManyToOne(targetEntity="Serie", inversedBy="episodes")
      */
     private $serie;
 

@@ -42,7 +42,7 @@ class Person
     private $seriesProducted;
 
         /**
-     * @ORM\OneToMany(targetEntity="Serie",mappedBy="acteur")
+     * @ORM\ManyToMany(targetEntity="Serie",mappedBy="acteur")
      * @var string
      */
     private $seriesPlayed;

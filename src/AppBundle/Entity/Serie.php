@@ -29,15 +29,15 @@ class Serie
      */
     private $nameSerie;
 
-    /*
-    * @ORM\OneToMany(targetEntity= "Episode", mappedBy= "serie", cascade={"remove"})
+    /**
+    * @ORM\OneToMany(targetEntity="Episode", mappedBy="serie", cascade={"remove"})
     */
     private $episodes;
 
 
     /**
      * @var string
-     * @ORM\ManyToOne(targetEntity= "Person", inversedBy= "seriesProducted")
+     * @ORM\ManyToOne(targetEntity="Person", inversedBy="seriesProducted")
      * 
      */
     private $realisateur;
@@ -45,7 +45,7 @@ class Serie
     /**
      * @var string
      *
-     * @ORM\ManyToMany(targetEntity= "Person", inversedBy= "seriesPlayed")
+     * @ORM\ManyToMany(targetEntity="Person", inversedBy="seriesPlayed")
      */
     private $acteur;
 
