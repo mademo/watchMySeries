@@ -5,9 +5,8 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 
-class SerieType extends AbstractType
+class PersonType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -16,11 +15,8 @@ class SerieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nameSerie')
-            ->add('origine')
-            ->add('dateProduction', DateType::class)
-            ->add('realisateur')
-            ->add('acteur')
+            ->add('name')
+            ->add('lastname')
         ;
     }
     
@@ -30,7 +26,7 @@ class SerieType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Serie'
+            'data_class' => 'AppBundle\Entity\Person'
         ));
     }
 }
