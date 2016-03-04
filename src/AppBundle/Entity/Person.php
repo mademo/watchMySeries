@@ -108,5 +108,11 @@ class Person
     {
         return $this->lastname;
     }
+
+    public function __toString()
+    {
+        return $this->name . " " .$this->lastname;
+
+    }
 }
 

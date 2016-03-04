@@ -21,6 +21,22 @@
                 <th>Dateproduction</th>
                 <td>{% if serie.dateProduction %}{{ serie.dateProduction|date('Y-m-d') }}{% endif %}</td>
             </tr>
+            <tr>
+                <th>Realisateur</th>
+                <td>{% if serie.realisateur %}{{ serie.realisateur }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Acteurs</th>
+                <td>{% if serie.acteur|length > 0 %}
+                    <ul>
+                        {% for acteur in serie.acteur %}
+                            <li>{{ acteur }}</li>
+                        {% endfor %}
+                    {% endif %}
+                    </ul>
+                    
+                </td>
+            </tr>
         </tbody>
     </table>
 
