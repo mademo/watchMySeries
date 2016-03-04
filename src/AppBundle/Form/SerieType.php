@@ -21,6 +21,7 @@ class SerieType extends AbstractType
             ->add('dateProduction', DateType::class)
             ->add('realisateur')
             ->add('acteur')
+            ->add('description')
         ;
     }
     
